@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" 
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    
+     
+    <servlet>
+        <servlet-name>Test</servlet-name>
+        <servlet-class>com.octest.Servlet.Test</servlet-class>
+    </servlet>
+    
+    
+    <servlet-mapping>
+        <servlet-name>Test</servlet-name>
+        <url-pattern>/bonjour</url-pattern>
+    </servlet-mapping>
+    
+  
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+  
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
+        </jsp-property-group>
+    </jsp-config>
+    
+    <servlet>
+        <servlet-name>roles</servlet-name>
+        <servlet-class>com.octest.Servlet.rolesservlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>update</servlet-name>
+        <servlet-class>com.octest.Servlet.rolesEditservlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>liste</servlet-name>
+        <servlet-class>com.octest.Servlet.rolesList</servlet-class>
+    </servlet>
+   
+    <servlet-mapping>
+        <servlet-name>roles</servlet-name>
+        <url-pattern>/roles</url-pattern>
+    </servlet-mapping>
+    
+      <servlet-mapping>
+        <servlet-name>update</servlet-name>
+        <url-pattern>/update</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>liste</servlet-name>
+        <url-pattern>/liste</url-pattern>
+    </servlet-mapping>
+
+</web-app>
